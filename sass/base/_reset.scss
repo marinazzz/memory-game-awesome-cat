@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 14px;
+}
+
+@include breakpoint-up('xxs') {
+  html {
+    font-size: calc(14px + 6 * ((100vw - 320px) / 680));
+  }
+}
+
+@include breakpoint-up('lg') {
+  html {
+    font-size: 17px;
+  }
+}
+
+body {
+  background-color: $bcd-primary;
+  color: $color-primary;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+main {
+  min-height: 100%;
+  padding: 0 2rem;
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+img {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+figure {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
